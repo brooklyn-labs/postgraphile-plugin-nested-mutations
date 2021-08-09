@@ -16,6 +16,7 @@ jobs:
           scope: '@bklyn-labs'
       - run: yarn install
       - run: yarn pack
+      - run: npm adduser --scope=@bklyn-labs
       - run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
