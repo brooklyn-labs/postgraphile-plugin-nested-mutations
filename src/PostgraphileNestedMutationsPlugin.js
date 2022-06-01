@@ -651,7 +651,11 @@ module.exports = function PostGraphileNestedMutationPlugin(builder) {
               );
             }
 
-            if (fieldValue.updateById || fieldValue.updateByNodeId) {
+            if (
+              (fieldValue.updateById && fieldValue.updateById.length > 0) ||
+              (fieldValue.updateByNodeId &&
+                fieldValue.updateByNodeId.length > 0)
+            ) {
               await Promise.all(
                 Object.keys(fieldValue)
                   .filter((f) => fieldValue[f])
