@@ -1478,7 +1478,7 @@ GraphQLSchema {
 }
 `;
 
-exports[`forward nested mutation with empty updateById array and a create child 1`] = `
+exports[`forward nested mutation with create and empty nested fields succeeds 1`] = `
 GraphQLSchema {
   "__validationErrors": Array [],
   "_directives": Array [

@@ -124,7 +124,11 @@ test(
                 name: "test f1"
                 childrenUsingId: {
                   create: null
+                  connectByNodeId: null
                   connectById: null
+                  deleteByNodeId: null
+                  deleteById: null
+                  updateByNodeId: null
                   updateById: null
                 }
               }
@@ -183,7 +187,11 @@ test(
                 name: "test f1"
                 childrenUsingId: {
                   create: []
+                  connectByNodeId: []
                   connectById: []
+                  deleteByNodeId: []
+                  deleteById: []
+                  updateByNodeId: []
                   updateById: []
                 }
               }
