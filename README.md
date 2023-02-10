@@ -1,7 +1,7 @@
 # postgraphile-plugin-nested-mutations
 
 ![GitHub Workflow Status (with branch)](https://img.shields.io/github/actions/workflow/status/brooklyn-labs/postgraphile-plugin-nested-mutations/ci.yml?branch=master&label=Build)
-![npm (scoped)](https://img.shields.io/npm/v/brooklyn-labs/postgraphile-plugin-nested-mutations?label=NPM)
+![npm (scoped)](https://img.shields.io/npm/v/@brooklyn-labs/postgraphile-plugin-nested-mutations?label=NPM)
 ![License](https://img.shields.io/github/license/brooklyn-labs/postgraphile-plugin-nested-mutations?label=License)
 
 This plugin implements nested mutations based on both forward and reverse foreign
