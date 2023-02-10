@@ -1,9 +1,11 @@
-name: Publish Package
+name: CI
 
 on:
   workflow_dispatch:
-  release:
-    types: [published]
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
 
 jobs:
   build:
@@ -12,17 +14,15 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-
+      
       - name: Setup Node.js 16
         uses: actions/setup-node@v3
         with:
-          node-version: "16.x"
-          registry-url: "https://registry.npmjs.org"
-          
+          node-version: 16
+          cache: "npm"
+      
       - name: Install dependencies
         run: yarn install --frozen-lockfile
-
-      - name: Publish Packages
-        run: npm publish --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      
+      - name: Run linters
+        run: yarn run lint
