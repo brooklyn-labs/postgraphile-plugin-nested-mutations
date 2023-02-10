@@ -1,5 +1,5 @@
 {
-  "name": "@bklyn-labs/postgraphile-plugin-nested-mutations",
+  "name": "@brooklyn-labs/postgraphile-plugin-nested-mutations",
   "version": "1.2.1",
   "description": "Nested mutations plugin for PostGraphile",
   "main": "index.js",
@@ -7,7 +7,7 @@
     "url": "git+https://github.com/brooklyn-labs/postgraphile-plugin-nested-mutations.git",
     "type": "git"
   },
-  "author": "Mark Lipscombe",
+  "author": "Brooklyn Labs",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/brooklyn-labs/postgraphile-plugin-nested-mutations/issues"
