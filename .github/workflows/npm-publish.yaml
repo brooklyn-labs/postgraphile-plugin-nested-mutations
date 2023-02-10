@@ -1,22 +1,28 @@
-name: Publish Package to NPM Registry
+name: Publish Package
 
 on:
+  workflow_dispatch:
   release:
-    types: [created]
+    types: [published]
 
 jobs:
   build:
-    name: Publish to NPM
     runs-on: ubuntu-latest
+    
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js 16
+        uses: actions/setup-node@v3
         with:
-          node-version: '16'
-          scope: '@bklyn-labs'
-      - run: yarn install
-      - run: yarn pack
-      - run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" > ~/.npmrc
-      - run: npm publish --access=public
+          node-version: "16.x"
+          registry-url: "https://registry.npmjs.org"
+          
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Publish Packages
+        run: npm publish --access public
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
