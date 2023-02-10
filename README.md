@@ -1,8 +1,8 @@
 # postgraphile-plugin-nested-mutations
 
-![GitHub Workflow Status (with branch)](https://img.shields.io/github/actions/workflow/status/brooklyn-labs/postgraphile-plugin-nested-mutations/ci.yml?branch=master&label=Build)
-![npm (scoped)](https://img.shields.io/npm/v/@brooklyn-labs/postgraphile-plugin-nested-mutations?label=NPM)
-![License](https://img.shields.io/github/license/brooklyn-labs/postgraphile-plugin-nested-mutations?label=License)
+[![GitHub Workflow Status (with branch)](https://img.shields.io/github/actions/workflow/status/brooklyn-labs/postgraphile-plugin-nested-mutations/ci.yml?branch=master&label=Build)](https://github.com/brooklyn-labs/postgraphile-plugin-nested-mutations/actions/workflows/ci.yml)
+[![npm (scoped)](https://img.shields.io/npm/v/@brooklyn-labs/postgraphile-plugin-nested-mutations?label=NPM)](https://www.npmjs.com/package/@brooklyn-labs/postgraphile-plugin-nested-mutations)
+[![License](https://img.shields.io/github/license/brooklyn-labs/postgraphile-plugin-nested-mutations?label=License)](https://github.com/brooklyn-labs/postgraphile-plugin-nested-mutations/blob/master/LICENSE)
 
 This plugin implements nested mutations based on both forward and reverse foreign
 key relationships in PostGraphile v4.  Nested mutations can be of infinite depth.
